@@ -1,0 +1,81 @@
+ label { display: block; }
+
+.advancedSearchLabel {
+    margin-right: 50px;
+}
+
+.advancedSearchErrorMessage {
+    font-weight: bold;
+    color: red;
+}
+
+.advancedSearchResultLabel {
+    font-weight: bold;
+    float:left; 
+    padding-bottom: 10px;
+}
+
+.buttonGroup {
+    float:right;    
+    padding-bottom: 10px;
+}
+
+.button{
+    background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 12px;
+    margin: 0;
+    padding: 4px 6px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+/* GRID */
+
+.grid-wrapper {
+    background-color: #FFFFFF;
+    margin-bottom:10px;
+}
+
+.grid-holder {
+    width:100%;
+}
+.grid { height:285px; }     /* 10 rows paging */
+
+
+.grid-header {
+    position:relative;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    -webkit-border-top-left-radius: 0.3em;
+    -webkit-border-top-right-radius: 0.3em;
+    -moz-border-radius-topleft: 0.3em;
+    -moz-border-radius-topright: 0.3em;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+}
+
+.grid-header label {margin-left: 3px;}
+.grid-header .grid-header-collapse-icon {
+
+    background-image:url(../../images/bg.gif);
+    cursor:pointer;
+    background-repeat: no-repeat;
+    display: block;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    right: 5px;
+    top: 10.5px;
+
+}
+
+.grid-header .actionIcon {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search person (demo)</title>
+
+        <link rel="stylesheet" type="text/css" href="vendor/css/jquery-ui-1.8.16.custom.css" />
+        <link rel="stylesheet" type="text/css" href="vendor/css/slick.grid.css" />
+        <link rel="stylesheet" type="text/css" href="advancedSearch.css" />
+    </head> 
+
+    <body>
+        
+        <!-- handlebars template: left fieldset -->            
+        <script id="advanced-search-person-dialog-left-fieldset-template" type="text/x-handlebars-template">    
+            <fieldset style="border-bottom: none;">
+                 <label class="advancedSearchLabel" for="advanced-search-first-name">First name</label>
+                <input id="advanced-search-first-name" name="advancedSearch.firstName" type="text" value="anna"/>
+                
+                <label class="advancedSearchLabel" for="advanced-search-last-name">Last name</label>
+                <input id="advanced-search-last-name" name="advancedSearch.lastName" type="text" />
+               
+            </fieldset>
+        </script>
+
+        <!-- handlebars template: right fieldset -->
+        <script id="advanced-search-person-dialog-right-fieldset-template" type="text/x-handlebars-template">
+            <fieldset style="border-bottom: none;">
+                <label class="advancedSearchLabel" for="advanced-search-zip-code">Zip code</label>
+                <input id="advanced-search-zip-code" name="advancedSearch.zipCode" type="text" />
+
+                <label class="advancedSearchLabel" for="advanced-search-city">City</label>
+                <input id="advanced-search-city" name="advancedSearch.city" type="text" value="farsta"/>
+
+            </fieldset>                   
+        </script>
+
+        <!-- handlebars template:  main dialog -->
+        <script id="advanced-search-dialog-template" type="text/x-handlebars-template">    
+            <div id="advanced-search-dialog" style="margin-top: 10px;">
+                <form id="advanced-search-form" action="javascript:void(0);">
+                    <div id="advanced-search-dialog-left-fieldset" style="float: left; width: 50%"></div>
+                    <div id="advanced-search-dialog-right-fieldset" style="float: right; width: 50%"></div>
+                
+                    <div style="clear: both; min-height: 30px;">
+                        <span class="advancedSearchErrorMessage" id="advanced-search-validation-error-message">&nbsp;</span>
+                    </div>
+
+                    <hr>
+
+                    <div>
+                        <span class="advancedSearchResultLabel">Search result</span>
+                        <span class="buttonGroup">                    
+                            <input type="submit" class="button" id="advanced-search-clear" value="Clear" />
+                            <input type="submit" class="button" id="advanced-search-update" value="Search" />
+                        </span>
+                    </div>
+
+                    <div style="clear:both;" id="advanced-search-result">
+                        <div>
+                            <div id="advanced-search-result-grid" class="grid"></div>
+                        </div>
+                    </div>
+                   
+                </form>
+            </div>
+        </script>
+
+        <!-- handlebars template:  error message -->
+        <script id="advanced-search-result-info-message-template" type="text/x-handlebars-template">   
+            <span id="advanced-search-result-info-message" class="advancedSearchErrorMessage" style="margin-left: 15px;"></span>
+        </script>
+
+
+        <!-- dialog holder -->
+        <div id="advanced-search-dialog-content" style="display: none; position: relative;" > 
+        </div>
+
+        <!-- RequireJS configuration -->
+        <script src="requireConfig.js"></script>
+        <script src="vendor/require.js"></script>
+
+        <!-- main script -->
+        <script src="advanced-search.js"></script>
+
+    </body>
+</html>
